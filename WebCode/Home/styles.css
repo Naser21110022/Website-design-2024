@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('Background.jpg'); 
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-bottom-style: solid;
+  border-color: #1584ce;
+}
+
+.logo img {
+  max-width: 100px; 
+  height: 100px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-left: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white; 
+  font-weight: bold; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Account-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-button {
+  background-color: #1584ce; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signin-button {
+  background-color: #333; 
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main {
+  text-align: center;
+  padding: 10px;
+}
+
+.content-container {
+  display:flex;
+  margin: auto;
+  margin-top: 2%;
+  align-items: center;
+  background-color: #333;
+  border-style: solid;
+  border-color: #1584ce;
+  padding: 20px;
+  width: 70%;
+  height: 50%;
+}
+
+.Text-box {
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
+  text-decoration: none;
+  color: white; 
+  font-weight: bold; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slideshow-container {
+  width: 500px;
+  height: 480px;
+  position:relative;
+  border-style: solid;
+  border-color: #1584ce;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: -30px;
+}
+
+.prev {
+  left: -30px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-weight: bold; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-top-style: solid;
+  border-color: #1584ce;
+}
+
+
+
+@media screen and (max-width: 390px) {
+  .nav ul {
+    gap: 10px; 
+    padding-left: 5px; 
+  }
+
+  .signup-button,
+  .signin-button {
+    padding: 6px 12px; 
+    font-size: 12px;
+  }
+
+  .welcome-heading {
+    font-size: 20px;
+  }
+
+  .content-container {
+    padding: 10px; 
+  }
+
+  .image-container {
+    margin-bottom: 10px;
+  }
+
+  .text-container {
+    font-size: 16px; 
+    margin-bottom: 10px; 
+  }
+
+  .footer {
+    padding: 5px;
+    font-size: 12px; 
+  }
+}
